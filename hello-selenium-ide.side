@@ -1,0 +1,92 @@
+{
+  "id": "297a8035-b235-465e-a0e7-7343179c82b2",
+  "version": "2.0",
+  "name": "hello-selenium-ide",
+  "url": "https://www.imdb.com",
+  "tests": [{
+    "id": "9ecbf03f-7cd3-4ffb-b0b5-321e47e40254",
+    "name": "imdb-wandavision",
+    "commands": [{
+      "id": "9921b477-cdc8-4540-8646-9de59a815ab6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21674cab-b7ff-4f2e-aac5-102f739e4175",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "722x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4fda5b3-9b66-4724-ab1e-f23c5535d8b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4349de9c-d831-41f5-9014-b894dca40792",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "wandavision"
+    }, {
+      "id": "3daac51a-515b-496f-87fe-b6744534614d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "01dad4a7-64a5-4d4f-b9e6-f4852c2f1fd0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=WandaVision",
+      "targets": [
+        ["linkText=WandaVision", "linkText"],
+        ["css=.findSection:nth-child(3) .findResult:nth-child(2) > .result_text > a", "css:finder"],
+        ["xpath=//a[contains(text(),'WandaVision')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[2]/table/tbody/tr[2]/td[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/title/tt13846912/?ref_=fn_al_tt_2')])[2]", "xpath:href"],
+        ["xpath=//tr[2]/td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'WandaVision')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "eb3f547d-b939-44af-8d59-2a6671bd693f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9ecbf03f-7cd3-4ffb-b0b5-321e47e40254"]
+  }],
+  "urls": ["https://stackoverflow.com/", "https://www.amazon.es/"],
+  "plugins": []
+}
