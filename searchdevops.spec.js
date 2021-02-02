@@ -16,11 +16,11 @@ describe('search-devops', function() {
   it('search-devops', async function() {
     await driver.get("https://www.google.com/")
     await driver.switchTo().frame(0)
-    await driver.findElement(By.css("#introAgreeButton .RveJvd")).click()
+    await driver.wait(until.elementLocated(By.css("#introAgreeButton .RveJvd"))).click()
     await driver.switchTo().defaultContent()
     await driver.findElement(By.name("q")).click()
     await driver.findElement(By.name("q")).sendKeys("devops")
     await driver.findElement(By.name("q")).sendKeys(Key.ENTER)
-    await driver.findElement(By.css(".g:nth-child(10) .LC20lb > span")).click()
+    await driver.wait(until.elementLocated(By.xpath("//div[@id=\'rso\']/div[3]/div/div/div/a/h3/span"))).click()
   })
 })
