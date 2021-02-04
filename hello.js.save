@@ -1,0 +1,4 @@
+const webdriver = require('selenium-webdriver');
+let driver = new webdriver.Builder()
+	.forBrowser('firefox').build();
+await driver.get('https://www.google.com/');
